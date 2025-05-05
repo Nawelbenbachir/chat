@@ -19,9 +19,10 @@ class MessageFactory extends Factory
     public function definition(): array
     {
         return [
+            //génère un id aléatoire à partir de la classe user
             'expediteur_id'=>User::all()->random()->id,
-            'date_heure'=>fake()->dateTimeBetween('2-year','now'),
-            'message'=>$this->faker->words(500),
+            'date_heure' => fake()->dateTimeBetween('-2 years', 'now'),
+            'message'=>$this->faker->paragraph(),
             
         ];
     }

@@ -11,6 +11,7 @@ class MessageSeeder extends Seeder
      */
     public function run(): void
     {
+    //génère des données à partir de la classe correspondante (message ou utilisateur)
         Message::factory(100)->create();
     }
 }
