@@ -19,7 +19,7 @@ class MessageFactory extends Factory
         return [
             'expediteur_id'=>fake()->id(),
             'date_heure'=>fake()->date_time(),
-            'message'=>faker->words(500),
+            'message'=>$this->faker->words(500),
             
         ];
     }
