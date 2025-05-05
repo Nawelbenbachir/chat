@@ -23,5 +23,5 @@ class MessageFactory extends Factory
             
         ];
     }
-    Message::factory(100)->create();
+   
 }
