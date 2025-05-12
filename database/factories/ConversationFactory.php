@@ -23,6 +23,7 @@ class ConversationFactory extends Factory
             'interlocuteur1_id'=>User::all()->random()->id,
             'interlocuteur2_id'=>User::all()->random()->id,
             'created_at' => fake()->dateTimeBetween('-2 years', 'now'),
+            //'updated_at' => fake()->dateTimeBetween('created_at', 'now'),
 
         ];
     }
