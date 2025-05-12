@@ -18,7 +18,7 @@ class ConversationFactory extends Factory
     public function definition(): array
     {
         return [
-            'titre'=>$this->faker->text(),
+            'titre'=>$this->faker->text(255),
             'createur_id'=>User::all()->random()->id,
             'interlocuteur1_id'=>User::all()->random()->id,
             'interlocuteur2_id'=>User::all()->random()->id,
