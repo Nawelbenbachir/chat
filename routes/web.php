@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 //Route Racine du site
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/a-propos', [HomeController::class, 'a-propos']);
+Route::get('/a-propos', [HomeController::class, 'a_propos']);
 Route::get('/contact', [HomeController::class, 'contact']);
 
 Route::get('/dashboard', function () {

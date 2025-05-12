@@ -11,10 +11,6 @@ class HomeController extends Controller
 //Nouvelle synthaxe php8 permet de préciser quel type de variable retourne la fonction
     public function index() : View
     {
-        return view('contact');
-        //return view('a-propos');
-
-
         //récupère tout les messages dans la variable $message 
         // et trier les messages du plus vieux au plus récent 
         $messages = Message::query()
@@ -24,5 +20,11 @@ class HomeController extends Controller
         //compresse les msg pour aller plus vite
 
 
+    }
+    public function a_propos(): View{
+        return view ('a-propos');
+    }
+    public function contact(): View{
+        return view ('contact');
     }
 }
