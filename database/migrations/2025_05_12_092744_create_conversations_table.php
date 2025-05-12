@@ -19,6 +19,8 @@ return new class extends Migration
             $table->foreignId('createur_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('interlocuteur1_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('interlocuteur2_id')->constrained('users')->onDelete('cascade');
+            // cascade : en cas de suppression de l'user, toute les conv associées sont supprimées
+            //set nul : // valeur nul ajoutées a la place de l'id interlocuteur (à condition que la clé étrangere soit nullable)
 
         });
     }

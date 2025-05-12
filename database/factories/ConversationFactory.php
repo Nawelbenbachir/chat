@@ -1,7 +1,8 @@
 <?php
 
 namespace Database\Factories;
-
+use App\Models\User;
+use App\Models\Conversation;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,12 @@ class ConversationFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'titre'=>$this->faker->text(),
+            'createur_id'=>User::all()->random()->id,
+            'interlocuteur1_id'=>User::all()->random()->id,
+            'interlocuteur2_id'=>User::all()->random()->id,
+            'created_at' => fake()->dateTimeBetween('-2 years', 'now'),
+
         ];
     }
 }
