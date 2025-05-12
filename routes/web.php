@@ -8,7 +8,10 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+//Route Racine du site
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/a-propos', [HomeController::class, 'a-propos']);
+Route::get('/contact', [HomeController::class, 'contact']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
