@@ -4,9 +4,6 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
 
 //Route Racine du site
 Route::get('/', [HomeController::class, 'index']);
