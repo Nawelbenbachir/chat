@@ -19,7 +19,6 @@ class GroupeFactory extends Factory
     {
         return [
             'name' => $this->faker->text(50),
-            'created_at' => fake()->dateTimeBetween('-2 years', 'now'),
             'createur'=>User::all()->random()->id,
             'description'=>$this->faker->text(255),
             'nombres_de_membres'=>$this->faker->numberBetween(1, 100),

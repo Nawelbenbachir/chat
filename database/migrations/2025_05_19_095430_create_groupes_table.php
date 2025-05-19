@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description')->nullable();
-            $table->string('updated_at')->nullable();
-            $table->string('created_at');
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
+            $table->timestamp('created_at')->useCurrent();
             $table->string('avatar')->nullable();
             $table->foreignId('createur')->constrained('users')->onDelete('cascade');
             $table->string('nombres_de_membres');
