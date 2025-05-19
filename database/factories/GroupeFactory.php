@@ -21,7 +21,7 @@ class GroupeFactory extends Factory
             'name' => $this->faker->text(50),
             'createur'=>User::all()->random()->id,
             'description'=>$this->faker->text(255),
-            'nombres_de_membres'=>$this->faker->numberBetween(1, 100),
+            'max_user'=>$this->faker->numberBetween(1, 100),
         ];
     }
 }

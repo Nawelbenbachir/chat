@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Groupe extends Model
 {
     use HasFactory;
+    // autoriser les champs à être remplis en masse (mass assignment) 
+    // protection contre les attaques de type mass assignment
     protected $fillable=[
         'name',
         'description',
