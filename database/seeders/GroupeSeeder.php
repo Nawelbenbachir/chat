@@ -1,21 +1,17 @@
 <?php
 
 namespace Database\Seeders;
-
+use App\Models\Groupe;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Test;
 
-class TestSeeder extends Seeder
+class GroupeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Test::create([
-            'name'=> 'name',
-            'description'=>'description',
-        ]);
+        Groupe::factory(100)->create();
     }
 }
