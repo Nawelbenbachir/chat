@@ -1,3 +1,4 @@
-<div>
+<x-guest-layout>
    Contact
-</div>
+</x-guest-layout>
+
