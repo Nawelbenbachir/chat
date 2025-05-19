@@ -1,3 +1,4 @@
+# tout ce qui n'est pas envoyé sur git 
 /.phpunit.cache
 /node_modules
 /public/build

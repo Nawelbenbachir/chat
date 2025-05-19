@@ -16,7 +16,8 @@ class HomeController extends Controller
         $messages = Message::query()
         ->orderBy('date_heure','asc')
         ->get();
-        return view("home",compact('messages'));
+        return view("welcome");
+        // return view("home",compact('messages'));
         //compresse les msg pour aller plus vite
 
 
