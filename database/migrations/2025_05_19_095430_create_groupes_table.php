@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description')->nullable();
-            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
-            $table->timestamp('created_at')->useCurrent();
             $table->string('avatar')->nullable();
             $table->foreignId('createur')->constrained('users')->onDelete('cascade');
-            $table->string('nombres_de_membres');
+            $table->integer('nombres_de_membres');
+             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 
