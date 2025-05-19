@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('avatar')->nullable();
             $table->foreignId('createur')->constrained('users')->onDelete('cascade');
             $table->integer('nombres_de_membres');
-             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
             $table->timestamp('created_at')->useCurrent();
         });
     }
