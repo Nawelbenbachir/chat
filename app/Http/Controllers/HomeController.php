@@ -16,11 +16,13 @@ class HomeController extends Controller
         $messages = Message::query()
         ->orderBy('date_heure','asc')
         ->get();
-        return view("welcome");
-        // return view("home",compact('messages'));
+        return view("home",compact('messages'));
         //compresse les msg pour aller plus vite
 
 
+    }
+    public function cgu():View{
+        return view ('cgu');
     }
     public function a_propos(): View{
         return view ('a-propos');
